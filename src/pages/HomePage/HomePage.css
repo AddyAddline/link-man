@@ -1,0 +1,132 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.background-container {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  background-size: var(--original) var(--original);
+  background-image: linear-gradient(to right, #bebebe 1px, transparent 1px),
+    linear-gradient(to bottom, #bebebe 1px, transparent 1px);
+  background-position: 1rem 0, 0 1rem;
+}
+
+.black-item-1,
+.black-item-2 {
+  margin-left: 1rem;
+}
+
+.black-item-1,
+.black-item-2,
+.black-item-3 {
+  background-color: #222222;
+}
+
+.black-item-1 {
+  width: calc(var(--original) * 2);
+  height: var(--original);
+  margin-top: 1rem;
+}
+
+.black-item-2 {
+  width: calc(var(--original) * 6);
+  height: var(--original);
+}
+
+.black-item-3 {
+  width: 100%;
+  height: calc(var(--original) * 3);
+  background-position: 1rem 0, 0 0;
+}
+
+.main-pink {
+  display: flex;
+  justify-content: center;
+}
+
+.sub-pink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pink-item-1,
+.pink-item-2,
+.pink-item-3,
+.pink-item-4 {
+  background-color: #f8c5ca;
+}
+
+.pink-item-1 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--original) * 3);
+  background-position: 1rem 0, 0 0;
+}
+
+.pink-item-2 {
+  width: calc(var(--original) * 3);
+  height: var(--original);
+}
+
+.pink-item-3 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--original) * 7);
+  height: var(--original);
+}
+
+.pink-item-4 {
+  width: calc(var(--original) * 3);
+  height: var(--original);
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.submit-button {
+  font-family: "Mario-Kart";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border: 1px solid #504a4a;
+  font-size: 2.5rem;
+}
+
+.submit-button:hover {
+  border: 1px solid #d5afb3;
+  color: #ffffff;
+  background-color: #3b3b3b;
+}

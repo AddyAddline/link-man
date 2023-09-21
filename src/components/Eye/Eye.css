@@ -1,0 +1,105 @@
+
+
+.eye-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: calc(5*var(--original));
+
+    text-align: center;
+}
+
+.eye {
+    width: calc(var(--original) * 1.8);
+    height: calc(var(--original) * 1.8);
+    background-color: #fff;
+    border: 4px solid #333;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.pupil {
+    width: calc((var(--original))*0.7);
+    height: calc((var(--original))*0.7);
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 100ms ease-in-out;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    outline: none;
+    font-size: 16px;
+}
+@media (orientation: portrait) and (max-width:700px) {
+    .eye-input{
+        width: calc(4.5*var(--original));
+    }
+}
+@media (orientation: portrait) and (max-width:550px) {
+    .eye-input{
+        width: calc(4*var(--original));
+    }
+}
+
+@media (orientation: portrait) and (max-width:450px) {
+   
+    .eye{
+        width: calc(var(--original) * 1.5);
+        height: calc(var(--original) * 1.5);
+   
+    }
+    .pupil{
+        width: calc((var(--original))*0.6);
+    height: calc((var(--original))*0.6);
+    }
+  }
+  @media (orientation: portrait) and (max-width:400px) {
+    .eye-input{
+        width: calc(3*var(--original));
+    }
+}
+  @media (orientation: portrait) and (max-width:370px) {
+    .eye-input{
+        width: calc(2.8*var(--original));
+    }
+    .eye{
+        width: calc(var(--original) * 1.3);
+        height: calc(var(--original) * 1.3);
+   
+    }
+    .pupil{
+        width: calc((var(--original))*0.5);
+    height: calc((var(--original))*0.5);
+    }
+  }
+ 
+  @media (orientation: portrait) and (max-width:330px) {
+    .eye-input{
+        width: calc(1*var(--original));
+    }
+    .eye{
+        width: calc(var(--original) * 1);
+        height: calc(var(--original) * 1);
+   
+    }
+    .pupil{
+        width: calc((var(--original))*0.4);
+    height: calc((var(--original))*0.4);
+    }
+  }
+ 
