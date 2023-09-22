@@ -6,11 +6,13 @@ import axios from 'axios';
 import SubmitButton from '../../components/SubmitButton';
 import GeneratedLink from '../../components/GeneratedLink/GeneratedLink';
 import toast, { Toaster } from 'react-hot-toast';
-
+import { Typewriter } from 'react-simple-typewriter';
+import { heroText } from '../../config/heroText.json';
 function HomePage() {
 	const [ newUrl, setNewUrl ] = useState('');
 	const [ submited, setSubmited ] = useState(false);
 	const [ isLoading, setIsLoading ] = useState(false);
+	const [ isHeroText, setIsHeroText ] = useState(true);
 	const [ data, setData ] = useState({
 		url: '',
 		password: ''
@@ -48,6 +50,7 @@ function HomePage() {
 			[name]: value
 		}));
 		setSubmited(false);
+		setIsHeroText(false);
 	}
 
 	async function handleSubmit(event) {
@@ -86,7 +89,22 @@ function HomePage() {
 					<div className="black-item-1" />
 					<div className="black-item-2" />
 
-					<div className="black-item-3" />
+					<div className="black-item-3">
+						{isHeroText ? (
+							<div className="hero-text">
+								<span>
+									<Typewriter
+										words={heroText}
+										loop={false}
+										cursor={false}
+										typeSpeed={100}
+										deleteSpeed={60}
+										delaySpeed={1500}
+									/>
+								</span>
+							</div>
+						) : null}
+					</div>
 					<div id="trackingDiv">
 						<div className="pink-item-1">
 							<div className="form-overlay">

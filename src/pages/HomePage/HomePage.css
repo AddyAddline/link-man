@@ -39,6 +39,7 @@ main {
   width: calc(var(--original) * 2);
   height: var(--original);
   margin-top: 1rem;
+
 }
 
 .black-item-2 {
@@ -50,6 +51,7 @@ main {
   width: 100%;
   height: calc(var(--original) * 3);
   background-position: 1rem 0, 0 0;
+  position: relative;
 }
 
 .main-pink {
@@ -110,7 +112,21 @@ main {
   justify-content: center;
   flex-direction: row;
 }
+.hero-text{
+  font-family: "Mario-Kart";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 
+  color: white;
+  font-size: 2.5rem;
+}
+.hero-text span{
+  padding-right: 0.3rem;
+}
 .submit-button {
   font-family: "Mario-Kart";
   position: absolute;
@@ -129,4 +145,25 @@ main {
   border: 1px solid #d5afb3;
   color: #ffffff;
   background-color: #3b3b3b;
+}
+
+@media (max-width:800px){
+  .hero-text{
+    font-size: 2rem;
+  }
+}
+@media (max-width:650px){
+  .hero-text{
+    font-size: 1.8rem;
+  }
+}
+@media (max-width:500px){
+  .hero-text{
+    font-size: 1.4rem;
+  }
+}
+@media (max-width:400px){
+  .hero-text{
+    font-size: 1rem;
+  }
 }
