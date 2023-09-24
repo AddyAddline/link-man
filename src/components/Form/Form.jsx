@@ -12,7 +12,7 @@ export function Form(props) {
 					className="url-box"
 					name="url"
 					type="string"
-					placeholder="Enter url"
+					placeholder="Enter URL"
 					value={props.data.url}
 					onChange={props.handleChange}
 				/>

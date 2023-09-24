@@ -40,7 +40,22 @@ function HomePage() {
 		},
 		[ isLoading ]
 	);
-
+	useEffect(
+		() => {
+			if (submited) {
+				toast('you can now use this protected URL!', {
+					icon: '🔒',
+					style: {
+						fontFamily: 'Mario-Kart',
+						border: '1px solid #222222',
+						padding: '16px',
+						color: '#222222'
+					}
+				});
+			}
+		},
+		[ submited ]
+	);
 	function handleChange(event) {
 		const { name, value } = event.target;
 		setData((prevData) => ({
@@ -56,9 +71,15 @@ function HomePage() {
 		try {
 			const response = await axios.post(import.meta.env.VITE_API_URL + '/api/generate', data);
 
-			setNewUrl(window.location.href + response.data.shortId);
-			setSubmited(true);
+			if (response.data && response.data.shortId) {
+				setNewUrl(window.location.href + response.data.shortId);
+				setSubmited(true);
+			} else {
+				throw new Error('Something went wrong');
+			}
 		} catch (error) {
+			console.log(error);
+
 			toast.error(error.response.data.message, {
 				style: {
 					fontFamily: 'Mario-Kart',
